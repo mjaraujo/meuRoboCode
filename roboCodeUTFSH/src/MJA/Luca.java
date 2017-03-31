@@ -1,4 +1,4 @@
-package Luca;
+package MJA;
 
 
 import robocode.HitByBulletEvent;
