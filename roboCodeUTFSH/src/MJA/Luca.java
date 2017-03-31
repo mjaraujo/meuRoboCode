@@ -17,7 +17,8 @@ public class Luca extends RateControlRobot {
     }
     public void onScannedRobot(ScannedRobotEvent Inimigo) {
 	double distancia = Inimigo.getDistance();
-	
+        turnGunRight(0);
+        ahead(0);
 	if ( distancia < 50 ) {
 		fire(5);
 	}else if(distancia < 150){
@@ -48,7 +49,7 @@ public class Luca extends RateControlRobot {
 
     
     public void onHitByBullet(HitByBulletEvent e) {
-        back(100);
+       ahead(100);
     }
 
     public void onHitWall(HitWallEvent e) {

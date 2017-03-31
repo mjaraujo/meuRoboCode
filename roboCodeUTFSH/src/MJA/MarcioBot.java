@@ -49,7 +49,8 @@ public class MarcioBot extends Robot {
     }
 
     private void monitorar() {
-        turnRadarRight(360);
+        turnRadarRight(60);
+        turnRadarLeft(120);
 
     }
 
@@ -76,7 +77,7 @@ public class MarcioBot extends Robot {
     public void onScannedRobot(ScannedRobotEvent e) {
         // Replace the next line with any behavior you would like
         double dirTiro = getHeading() + e.getBearing() - getGunHeading();
-        direcao = getHeading() + e.getBearing() ;
+        direcao = e.getBearing()+90 ;
         
         turnGunRight(dirTiro);
         if (e.getDistance() < 100) {
